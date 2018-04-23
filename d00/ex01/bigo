@@ -1,0 +1,5 @@
+O(n * log2(n)) time for best case.
+O(n * log(n)) most likely.
+O(n^2) time for worst case(not happening though).
+
+O(log(n)) space. 
