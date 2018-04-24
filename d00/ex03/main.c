@@ -14,10 +14,21 @@ int main(void)
 	/*-------------------
 	launch your test here
 	--------------------*/
-	//struct s_dict *dict;
-	//
-	//
+	struct s_dict	*dict;
+	int				len;
 
+	len = arts_len(arts);
+	printf("Init dict\n");
+	dict = dictInit(len);
+	for (int i = 0; i < len; i++) {
+		dictInsert(dict, arts[i]->name, arts[i]);
+	}
+	printf("Populated dict\n");
+	printf("price for the art \'%s\' is %d\n", "Guernica", dictSearch(dict, "Guernica")->price);
+	printf("price for the art \'%s\' is %d\n", "Miserere", dictSearch(dict, "Miserere")->price);
+	printf("price for the art \'%s\' is %p\n", "jkdhfkjsadhdgf", dictSearch(dict, "jkdhfkjsadhdgf"));
+	printf("price for the art \'%s\' is %p\n", "Starry night", dictSearch(dict, "Starry night"));
+	printf("price for the art \'%s\' is %d\n", "Miserere", dictSearch(dict, "Miserere")->price);
 	return (0);
 }
 

@@ -1,7 +1,7 @@
 #ifndef HEADER_H
 # define HEADER_H
 
-# include <stfdef.h>
+# include <stddef.h>
 
 /*--------------------------------
   !! required structure
@@ -52,6 +52,9 @@ struct s_art **getArts(void);
   --------------------------------*/
 
 typedef struct s_dict		t_dict;
-typedef struct t_item		t_item;
+typedef struct s_item		t_item;
+typedef struct s_art		t_art;
+
+int							arts_len(t_art **arts);
 
 #endif
