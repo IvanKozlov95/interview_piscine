@@ -19,7 +19,7 @@ int main(void)
 
 	len = arts_len(arts);
 	printf("Init dict\n");
-	dict = dictInit(len);
+	dict = dictInit(len / 2);
 	for (int i = 0; i < len; i++) {
 		dictInsert(dict, arts[i]->name, arts[i]);
 	}
