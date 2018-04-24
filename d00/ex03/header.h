@@ -4,28 +4,28 @@
 # include <stddef.h>
 
 /*--------------------------------
-  !! required structure
-  --------------------------------*/
+	!! required structure
+	--------------------------------*/
 
 struct  s_art {
-  char *name;
-  int  price;
+	char *name;
+	int  price;
 };
 
 struct s_item {
-  char           *key; //here the key will be the name
-  struct s_art   *value;
-  struct s_item  *next;
+	char           *key; //here the key will be the name
+	struct s_art   *value;
+	struct s_item  *next;
 };
 
 struct s_dict {
-  struct s_item **items;
-  int           capacity; //the capacity of the array 'items'
+	struct s_item **items;
+	int           capacity; //the capacity of the array 'items'
 };
 
 /*--------------------------------
-  :) function you must implement
-  --------------------------------*/
+	:) function you must implement
+	--------------------------------*/
 
 // DICTIONNARY
 
@@ -41,20 +41,21 @@ int searchPrice(struct s_dict *dict, char *name);
 
 
 /*--------------------------------
-  ?? test function used in main 
-  --------------------------------*/
+	?? test function used in main 
+	--------------------------------*/
 
 struct s_art **getArts(void);
 
 
 /*--------------------------------
-  &  your own other function
-  --------------------------------*/
+	&  your own other function
+	--------------------------------*/
 
 typedef struct s_dict		t_dict;
 typedef struct s_item		t_item;
 typedef struct s_art		t_art;
 
 int							arts_len(t_art **arts);
+void						find(t_dict *d, char *key);
 
 #endif

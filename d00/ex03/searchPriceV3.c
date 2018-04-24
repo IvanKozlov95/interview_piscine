@@ -6,7 +6,7 @@
 /*   By: ivankozlov <ivankozlov@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/23 16:54:15 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/04/23 21:10:29 by ivankozlov       ###   ########.fr       */
+/*   Updated: 2018/04/23 21:17:20 by ivankozlov       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,4 +105,14 @@ struct s_art *dictSearch(struct s_dict *dict, char *key)
 		list = list->next;
 	}
 	return (NULL);
+}
+
+void		find(t_dict *d, char *key) {
+	t_art	*item;
+
+	item = dictSearch(d, key);
+	if (item)
+		printf("Art: name \'%s\' price %d\n", item->name, item->price);
+	else
+		printf("Art not found. Key: %s\n", key);
 }

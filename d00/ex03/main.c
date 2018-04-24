@@ -24,11 +24,11 @@ int main(void)
 		dictInsert(dict, arts[i]->name, arts[i]);
 	}
 	printf("Populated dict\n");
-	printf("price for the art \'%s\' is %d\n", "Guernica", dictSearch(dict, "Guernica")->price);
-	printf("price for the art \'%s\' is %d\n", "Miserere", dictSearch(dict, "Miserere")->price);
-	printf("price for the art \'%s\' is %p\n", "jkdhfkjsadhdgf", dictSearch(dict, "jkdhfkjsadhdgf"));
-	printf("price for the art \'%s\' is %p\n", "Starry night", dictSearch(dict, "Starry night"));
-	printf("price for the art \'%s\' is %d\n", "Miserere", dictSearch(dict, "Miserere")->price);
+	find(dict, "Miserere");
+	find(dict, "jkdhfkjsadhdgf");
+	find(dict, "Starry night");
+	find(dict, "Mona Lisa");
+
 	return (0);
 }
 
