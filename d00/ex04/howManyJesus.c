@@ -6,7 +6,7 @@
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/24 09:17:01 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/04/24 09:49:25 by ikozlov          ###   ########.fr       */
+/*   Updated: 2018/04/24 12:02:50 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int		howManyJesus(char *bible, char *jesus) {
 		while (!isalpha(bible[i])) i++;
 		if (strncmp(bible + i, term, term_len) == 0)
 			thatMany++;
-		while (bible[i] != ' ' && bible[i] != '\n') i++;
+		while (isalpha(bible[i])) i++;
 	}
 	free(term);
 	return (thatMany);
