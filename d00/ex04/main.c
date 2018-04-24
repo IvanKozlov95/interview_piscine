@@ -23,6 +23,8 @@ int main(void)
 	printf("shit - %d\n", howManyJesus(book, "shit"));
 	printf("blood - %d\n", howManyJesus(book, "blood"));
 	printf("devil - %d\n", howManyJesus(book, "devil"));
+	printf("yes - %d\n", howManyJesus(book, "yes"));
+	printf("no - %d\n", howManyJesus(book, "no"));
 
 	return (0);
 }
