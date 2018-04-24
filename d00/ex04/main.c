@@ -17,7 +17,12 @@ int main(void)
 	--------------------*/
 	printf("Jesus - %d\n", howManyJesus(book, "God"));
 	printf("God - %d\n", howManyJesus(book, "Lord"));
+	printf("die - %d\n", howManyJesus(book, "die"));
 	printf("kill - %d\n", howManyJesus(book, "kill"));
+	printf("murder - %d\n", howManyJesus(book, "murder"));
+	printf("shit - %d\n", howManyJesus(book, "shit"));
+	printf("blood - %d\n", howManyJesus(book, "blood"));
+	printf("devil - %d\n", howManyJesus(book, "devil"));
 
 	return (0);
 }
