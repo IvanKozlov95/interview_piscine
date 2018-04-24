@@ -44,5 +44,7 @@ void readWordsFile(char ***pWords, int *pLenWords);
   &  your own other function
   --------------------------------*/
 
+typedef struct s_dict		t_dict;
+typedef struct s_item		t_item;
 
 #endif

@@ -18,13 +18,14 @@ int main(void)
 	/*-------------------
 	launch your test here
 	--------------------*/
-	//struct s_dict *dict;
-	//
-	//dict = dictInit(lenWords);
-	//
-	//for (int i = 0; i < lenWords; i++)
-	//	dictInsert(dict, words[i], i);
-	//
+	struct s_dict *dict;
+	
+	dict = dictInit(lenWords);
+	
+	for (int i = 0; i < lenWords; i++)
+		dictInsert(dict, words[i], i);
+	char *asd = compress(book, dict);
+	printf("%s\n", asd);
 
 	return (0);
 }
