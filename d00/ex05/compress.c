@@ -6,7 +6,7 @@
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/24 12:10:48 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/04/24 15:00:23 by ikozlov          ###   ########.fr       */
+/*   Updated: 2018/04/24 15:15:43 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,22 +15,6 @@
 #include <stdio.h>
 #include <ctype.h>
 #include "header.h"
-
-/*
-**	Utils
-*/
-
-char	*copyword(char *s, int i) {
-	int		j;
-	char	*res;
-
-	j = i;
-	while (isalpha(s[j])) j++;
-	res = malloc(j - i + 1);
-	strncpy(res, s + i, j - i + 1);
-	res[j - i] = '\0';
-	return (res);
-}
 
 /*
 **	List functions
@@ -111,7 +95,7 @@ int				dictSearch(struct s_dict *dict, char *key)
 	return (-1);
 };
 
-char *dictPrintHeader(struct  s_dict *dict, int *size)
+char			*dictPrintHeader(struct  s_dict *dict, int *size)
 {
 	char	*h;
 	char	*header;
@@ -148,10 +132,22 @@ char *dictPrintHeader(struct  s_dict *dict, int *size)
 }
 
 /*
-**	Mandatory functions
+**	Utils
 */
 
-char	*init_compress(int book_len, t_dict *dict, int *pos) {
+char			*copyword(char *s, int i) {
+	int		j;
+	char	*res;
+
+	j = i;
+	while (isalpha(s[j])) j++;
+	res = malloc(j - i + 1);
+	strncpy(res, s + i, j - i + 1);
+	res[j - i] = '\0';
+	return (res);
+}
+
+char			*init_compress(int book_len, t_dict *dict, int *pos) {
 	char	*res;
 	char	*header;
 	int		header_len;
@@ -165,7 +161,11 @@ char	*init_compress(int book_len, t_dict *dict, int *pos) {
 	return (res);
 }
 
-char	*compress(char *book, struct s_dict *dict) {
+/*
+**	Mandatory functions
+*/
+
+char			*compress(char *book, struct s_dict *dict) {
 	int		i;
 	int		j;
 	int		book_len;
@@ -177,10 +177,6 @@ char	*compress(char *book, struct s_dict *dict) {
 	book_len = strlen(book);
 	j = 0; i = 0;
 	compress = init_compress(book_len, dict, &j);
-	while (!isprint(book[i])) {
-		compress[j] = book[i];
-		i++; j++;
-	}
 	while (book[i]) {
 		while (!isalpha(book[i])) {
 			compress[j] = book[i];
