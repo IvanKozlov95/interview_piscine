@@ -6,7 +6,7 @@
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/25 15:30:33 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/04/25 16:10:11 by ikozlov          ###   ########.fr       */
+/*   Updated: 2018/04/25 16:54:38 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ t_item		*newNode(int idx) {
 	new->next = NULL;
 	return (new);
 }
-
 
 void	listAdd(t_item **alst, t_item *new)
 {
@@ -72,6 +71,7 @@ int			pop(struct s_stack *stack) {
 
 	if (!stack->item) return (-1);
 	res = stack->item->idx;
+	free(stack->item);
 	stack->item = stack->item->next;
 	return (res);
 }
@@ -86,28 +86,34 @@ void		push(struct s_stack *stack, int idx) {
 
 char		*console(void) {
 	int		i = 0;
+	int		read;
+	size_t	len = 0;
 	char	*msg = calloc(MSG_SIZE, sizeof(char));
-	char	buff[MSG_SIZE] = {0};
+	char	*buff = NULL;
 	t_stack	*st = initStack();
 
-	(void)st;
-	(void)msg;
 	while (1) {
 		printf("?: ");
-		scanf("%[^\n]%*c", buff);
+		read = getline(&buff, &len, stdin);
+		buff[read - 1] = '\0';
 		if (strcmp(buff, UNDO) == 0) {
 			i = pop(st);
-			memset(msg + i + 1, 0, MSG_SIZE - i);
+			memset(msg + i, 0, MSG_SIZE - i);
 		} else if (strcmp(buff, SEND) == 0) {
 			destroyStack(&st);
-			return (msg);
+			free(buff);
+			break ;
 		} else {
 			push(st, i);
+			if (i > 0) {
+				strcat(msg, " ");
+				i++;
+			}
 			strcat(msg, buff);
-			strcat(msg, " ");
 			i += strlen(buff);
 		}
+		free(buff); buff = NULL;
 		printf("%s\n\n", msg);
 	}
-	return (NULL);
+	return (msg);
 }
