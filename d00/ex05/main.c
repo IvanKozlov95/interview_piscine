@@ -26,6 +26,9 @@ int main(void)
 		dictInsert(dict, words[i], i);
 	char *asd = compress(book, dict);
 	printf("%s\n", asd);
+	for (int i = 0; i < lenWords; i++)
+		free(words[i]);
+	free(words);
 
 	return (0);
 }

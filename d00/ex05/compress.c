@@ -6,7 +6,7 @@
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/24 12:10:48 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/04/24 20:46:36 by ikozlov          ###   ########.fr       */
+/*   Updated: 2018/04/24 21:07:11 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -156,8 +156,8 @@ char			*init_compress(int book_len, t_dict *dict, int *pos) {
 	header = dictPrintHeader(dict, &header_len);
 	res = malloc(sizeof(char) * (book_len + header_len + 1));
 	strcpy(res, header);
+	free(header);
 	*pos = header_len;
-	(void)pos;
 	return (res);
 }
 
@@ -195,6 +195,7 @@ char			*compress(char *book, struct s_dict *dict) {
 		}
 		while (isalpha(book[i])) i++;
 	}
+	if (key) free(key);
 	compress[j] = '\0';
 	return (compress);
 }
