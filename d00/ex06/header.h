@@ -47,7 +47,7 @@ char *compress(char *book, char **words);
   &  your own other function
   --------------------------------*/
 
-# define CAPACITY 100
+# define CAPACITY 1024
 
 typedef struct s_dict		t_dict;
 typedef struct s_item		t_item;
