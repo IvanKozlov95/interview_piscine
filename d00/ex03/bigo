@@ -1,0 +1,8 @@
+Search:
+O(1) - to search inside hash table. O(n) - in worst case, if all objects in one node in dictionary (bash hash function).
+O(n) - to handle collision, where n - number of elements in list.
+O(1) - no additional space for search.
+
+Insert:
+O(1) - insert in average if there are not many collisions, O(n) - in worst case to iterate through collision list, n - number of elements in list.
+O(m) - space capacity, to copy items from array to hash table. m - number of elements in array.
