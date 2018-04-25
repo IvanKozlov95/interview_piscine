@@ -6,7 +6,7 @@
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/25 14:14:17 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/04/25 14:37:20 by ikozlov          ###   ########.fr       */
+/*   Updated: 2018/04/25 16:28:56 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,7 @@ void		*pop(struct s_stack *stack) {
 
 	if (!stack->item) return (NULL);
 	res = stack->item->word;
+	free(stack->item);
 	stack->item = stack->item->next;
 	return (res);
 }
