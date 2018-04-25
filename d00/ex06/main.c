@@ -16,6 +16,9 @@ int main(void)
 	launch your test here
 	--------------------*/
 
+	char *asd = decompress(cBook);
+	printf("%s\n", asd);
+
 	return (0);
 }
 

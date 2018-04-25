@@ -47,5 +47,10 @@ char *compress(char *book, char **words);
   &  your own other function
   --------------------------------*/
 
+# define CAPACITY 100
+
+typedef struct s_dict		t_dict;
+typedef struct s_item		t_item;
+typedef struct s_string	t_string;
 
 #endif
