@@ -23,5 +23,6 @@ struct s_node *createList(char **words, int n);
   &  your own other function
   --------------------------------*/
 
+typedef struct s_node		t_node;
 
 #endif
