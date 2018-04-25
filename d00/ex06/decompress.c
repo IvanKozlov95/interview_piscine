@@ -6,7 +6,7 @@
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/24 15:45:11 by ivankozlov        #+#    #+#             */
-/*   Updated: 2018/04/24 23:28:12 by ikozlov          ###   ########.fr       */
+/*   Updated: 2018/04/24 23:29:13 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int					stringAppend(struct s_string *s, char *add) {
 	int		capacity;
 
 	len = strlen(add);
-	capacity = 1;
+	capacity = s->capacity;
 	while (capacity < len + s->length + 1)
 		capacity *= 2;
 	if (capacity > s->capacity) {
