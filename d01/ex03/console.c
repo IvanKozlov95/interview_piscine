@@ -6,7 +6,7 @@
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/25 15:30:33 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/04/25 16:00:54 by ikozlov          ###   ########.fr       */
+/*   Updated: 2018/04/25 16:10:11 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,7 +98,6 @@ char		*console(void) {
 		if (strcmp(buff, UNDO) == 0) {
 			i = pop(st);
 			memset(msg + i + 1, 0, MSG_SIZE - i);
-			// i++;
 		} else if (strcmp(buff, SEND) == 0) {
 			destroyStack(&st);
 			return (msg);
