@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   decompress.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ivankozlov <ivankozlov@student.42.fr>      +#+  +:+       +#+        */
+/*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/24 15:45:11 by ivankozlov        #+#    #+#             */
-/*   Updated: 2018/04/24 17:10:22 by ivankozlov       ###   ########.fr       */
+/*   Updated: 2018/04/24 21:49:30 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,14 +31,18 @@ struct s_string		*stringInit(void) {
 
 int					stringAppend(struct s_string *s, char *add) {
 	int		len;
+	int		capacity;
 
 	len = strlen(add);
-	if (s->length + len > s->capacity) {
-		s->capacity = s->length + len + s->capacity + 1;
+	capacity = 1;
+	while (capacity < len + s->length + 1)
+		capacity *= 2;
+	if (capacity > s->capacity) {
+		s->capacity = capacity;
 		s->content = realloc(s->content, s->capacity);
-		bzero(s->content + s->length, s->capacity - s->length);
 		if (!s->content)
 			return (0);
+		bzero(s->content + s->length, s->capacity - s->length);
 	}
 	strcpy(s->content + s->length, add);
 	s->length += len;
