@@ -6,7 +6,7 @@
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/24 15:45:11 by ivankozlov        #+#    #+#             */
-/*   Updated: 2018/04/24 23:27:24 by ikozlov          ###   ########.fr       */
+/*   Updated: 2018/04/24 23:28:12 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,6 @@ char		**getWordsArray(char *header) {
 	char	*word;
 
 	words = ft_count_words(header, ',');
-	printf("words %d\n", words);
 	res = malloc(sizeof(char *) * (words + 1));
 	word = strtok(header, ",");
 	i = 0;
