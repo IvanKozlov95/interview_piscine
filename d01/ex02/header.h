@@ -44,5 +44,7 @@ struct s_node *createList(char **words, int n);
   &  your own other function
   --------------------------------*/
 
+typedef struct s_item		t_item;
+typedef struct s_stack	t_stack;
 
 #endif
