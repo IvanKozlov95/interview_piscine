@@ -1,0 +1,7 @@
+stringAppend:
+O(n) - in time in average, where n - length of string. 
+O(m + n) - in space where m - capacity of dyString and n - length of word.
+
+decompress:
+O(n) - in time going through book only once.
+O(n + m) - in space, where n - length of book, m - sum of all replaced words.

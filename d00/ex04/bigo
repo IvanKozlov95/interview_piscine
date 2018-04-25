@@ -1,0 +1,2 @@
+O(n) - in best case scenario, O(n*m) - worst case, in case of false positives. Where n is the length of the string and m is average length of word.
+O(1) - no any additional space is used.
