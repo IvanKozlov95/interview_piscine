@@ -6,7 +6,7 @@
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/24 12:10:48 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/04/24 15:15:43 by ikozlov          ###   ########.fr       */
+/*   Updated: 2018/04/24 20:46:36 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -185,7 +185,7 @@ char			*compress(char *book, struct s_dict *dict) {
 		if (key) free(key);
 		key = copyword(book, i);
 		search = dictSearch(dict, key);
-		if (search > 0) {
+		if (search >= 0) {
 			compress[j++] = '@';
 			compress[j++] = search + 1;
 		} else {
