@@ -6,7 +6,7 @@
 /*   By: ivankozlov <ivankozlov@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/23 16:54:15 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/04/23 21:17:20 by ivankozlov       ###   ########.fr       */
+/*   Updated: 2018/04/24 17:17:29 by ivankozlov       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,6 +92,7 @@ int				dictInsert(struct s_dict *dict,
 	ft_lstaddback(&dict->items[i], item);
 	return (i);
 }
+
 struct s_art *dictSearch(struct s_dict *dict, char *key)
 {
 	int		i;
