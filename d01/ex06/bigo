@@ -1,0 +1,2 @@
+O(n) - in time, going through array only once.
+O(n) - in space where n is depth of recursion.

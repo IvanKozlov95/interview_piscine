@@ -24,5 +24,6 @@ struct s_city *getCities(void);
   &  your own other function
   --------------------------------*/
 
+typedef struct s_city   t_city;
 
 #endif
