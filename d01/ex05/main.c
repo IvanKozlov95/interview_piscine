@@ -7,13 +7,45 @@
 
 int main(void)
 {
-	//struct s_tank *tank = initTank();
+	struct s_tank *tank = initTank();
 
 	/*-------------------
 	launch your test here
 	--------------------*/
-	//tankPush(tank, 10);
-	//tankPush(tank, 50);
+	tankPush(tank, 10);
+	tankPush(tank, 50);
+	tankPush(tank, 900);
+	tankPush(tank, 950);
+	tankPush(tank, 950);
+	int i = 0;
+	printf("n: %d\n", tank->n);
+	while (i < tank->n)
+	{
+		printf("stack: %d\n", tank->stacks[i]->sum);
+		i++;
+	}
+	printf("\npop: %d\n", tankPop(tank));
+	printf("n: %d\n", tank->n);
+
+	i = 0;
+	while (i < tank->n)
+	{
+		struct s_elem *temp = tank->stacks[i]->elem;
+		while (temp)
+		{
+			printf("#%d elem: %d\n", i, temp->energy);
+			temp = temp->next;
+		}
+		i++;
+	}
+	printf("\nn : %d pop: %d\n", tank->n, tankPop(tank));
+	printf("pop: %d\n", tankPop(tank));
+	printf("pop: %d\n", tankPop(tank));
+	printf("pop: %d\n", tankPop(tank));
+	printf("pop: %d\n", tankPop(tank));
+
+	tankPush(tank, 900);
+	printf("\npop: %d\n", tankPop(tank));
 	return (0);
 }
 

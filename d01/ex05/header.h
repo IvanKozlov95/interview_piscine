@@ -41,5 +41,8 @@ int tankPop(struct s_tank *tank);
   &  your own other function
   --------------------------------*/
 
+typedef struct s_elem			t_elem;
+typedef struct s_tank			t_tank;
+typedef struct s_stack		t_stack;
 
 #endif
