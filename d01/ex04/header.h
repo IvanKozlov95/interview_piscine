@@ -43,5 +43,7 @@ int isEmpty(struct s_queue *queue);
   &  your own other function
   --------------------------------*/
 
+typedef struct s_node			t_node;
+typedef struct s_queue		t_queue;
 
 #endif
