@@ -12,44 +12,56 @@ int main(void)
 	/*-------------------
 	launch your test here
 	--------------------*/
+	tankPush(tank, 100);
+	tankPush(tank, 100);
+	tankPush(tank, 100);
+	tankPush(tank, 100);
+	tankPush(tank, 100);
+	tankPush(tank, 100);
+	tankPush(tank, 100);
+	tankPush(tank, 100);
+	tankPush(tank, 100);
+	tankPush(tank, 100);
 	tankPush(tank, 10);
-	tankPush(tank, 50);
-	tankPush(tank, 900);
-	tankPush(tank, 950);
-	tankPush(tank, 950);
-	int i = 0;
-	printf("n: %d\n", tank->n);
-	while (i < tank->n)
-	{
-		printf("stack: %d\n", tank->stacks[i]->sum);
-		i++;
-	}
-	printf("\npop: %d\n", tankPop(tank));
-	printf("n: %d\n", tank->n);
 
-	i = 0;
-	while (i < tank->n)
-	{
-		struct s_elem *temp = tank->stacks[i]->elem;
-		while (temp)
-		{
-			printf("#%d elem: %d\n", i, temp->energy);
-			temp = temp->next;
-		}
-		i++;
-	}
-	printf("\nn : %d pop: %d\n", tank->n, tankPop(tank));
-	printf("pop: %d\n", tankPop(tank));
-	printf("pop: %d\n", tankPop(tank));
-	printf("pop: %d\n", tankPop(tank));
-	printf("pop: %d\n", tankPop(tank));
+	printf("Sum: %d Energy: %d Stack: %d\n", tank->stacks[tank->n - 1]->sum, tankPop(tank), tank->n);
+	printf("Sum: %d Energy: %d Stack: %d\n", tank->stacks[tank->n - 1]->sum, tankPop(tank), tank->n);
+	printf("Sum: %d Energy: %d Stack: %d\n", tank->stacks[tank->n - 1]->sum, tankPop(tank), tank->n);
+	printf("Sum: %d Energy: %d Stack: %d\n", tank->stacks[tank->n - 1]->sum, tankPop(tank), tank->n);
+	printf("Sum: %d Energy: %d Stack: %d\n", tank->stacks[tank->n - 1]->sum, tankPop(tank), tank->n);
+	printf("Sum: %d Energy: %d Stack: %d\n", tank->stacks[tank->n - 1]->sum, tankPop(tank), tank->n);
+	printf("Sum: %d Energy: %d Stack: %d\n", tank->stacks[tank->n - 1]->sum, tankPop(tank), tank->n);
+	printf("Sum: %d Energy: %d Stack: %d\n", tank->stacks[tank->n - 1]->sum, tankPop(tank), tank->n);
+	printf("Sum: %d Energy: %d Stack: %d\n", tank->stacks[tank->n - 1]->sum, tankPop(tank), tank->n);
+	printf("Sum: %d Energy: %d Stack: %d\n", tank->stacks[tank->n - 1]->sum, tankPop(tank), tank->n);
+	printf("asdasdasdSum: %d Energy: %d Stack: %d\n", 1, tankPop(tank), tank->n);
+	printf("asdSum: %d Energy: %d Stack: %d\n", 1, tankPop(tank), tank->n);
+	// printf("Sum: %d Energy: %d Stack: %d\n", tank->stacks[tank->n - 1]->sum, tankPop(tank), tank->n);
+	// printf("Sum: %d Energy: %d Stack: %d\n", tank->stacks[tank->n - 1]->sum, tankPop(tank), tank->n);
+	// printf("dasdum: %d Energy: %d Stack: %d\n", tank->stacks[tank->n - 1]->sum, tankPop(tank), tank->n);
 
-	tankPush(tank, 900);
-	printf("\npop: %d\n", tankPop(tank));
+
+	tankPush(tank, 10);
+	tankPush(tank, 11);
+	tankPush(tank, 12);
+	tankPush(tank, 13);
+	tankPush(tank, 14);
+	tankPush(tank, 15);
+	tankPush(tank, 16);
+
+	printf("Sum: %d Energy: %d Stack: %d\n", tank->stacks[tank->n - 1]->sum, tankPop(tank), tank->n);
+	printf("Sum: %d Energy: %d Stack: %d\n", tank->stacks[tank->n - 1]->sum, tankPop(tank), tank->n);
+	printf("Sum: %d Energy: %d Stack: %d\n", tank->stacks[tank->n - 1]->sum, tankPop(tank), tank->n);
+	printf("Sum: %d Energy: %d Stack: %d\n", tank->stacks[tank->n - 1]->sum, tankPop(tank), tank->n);
+	printf("Sum: %d Energy: %d Stack: %d\n", tank->stacks[tank->n - 1]->sum, tankPop(tank), tank->n);
+	printf("Sum: %d Energy: %d Stack: %d\n", tank->stacks[tank->n - 1]->sum, tankPop(tank), tank->n);
+	printf("Sum: %d Energy: %d Stack: %d\n", tank->stacks[tank->n - 1]->sum, tankPop(tank), tank->n);
+	printf("Sum: %d Energy: %d Stack: %d\n", tank->stacks[tank->n - 1]->sum, tankPop(tank), tank->n);
+	printf("Sum: %d Energy: %d Stack: %d\n", tank->stacks[tank->n - 1]->sum, tankPop(tank), tank->n);
+	printf("Sum: %d Energy: %d Stack: %d\n", tank->stacks[tank->n - 1]->sum, tankPop(tank), tank->n);
+	printf("Sum: %d Energy: %d Stack: %d\n", tank->stacks[tank->n - 1]->sum, tankPop(tank), tank->n);
+	printf("Sum: %d Energy: %d Stack: %d\n", tank->stacks[tank->n - 1]->sum, tankPop(tank), tank->n);
+
+
 	return (0);
 }
-
-
-
-// Function used for the test
-// Don't go further :)
