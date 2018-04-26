@@ -30,4 +30,14 @@ void exitWithMsg(char *msg);
   &  your own other function
   --------------------------------*/
 
+struct s_group {
+  int size;
+  struct s_group *next;
+  struct s_stone *first;
+  struct s_stone *last;
+};
+
+typedef struct s_group    t_group;
+typedef struct s_stone    t_stone;
+
 #endif
