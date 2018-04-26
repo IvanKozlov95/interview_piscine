@@ -6,7 +6,7 @@
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/25 15:30:33 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/04/25 16:54:38 by ikozlov          ###   ########.fr       */
+/*   Updated: 2018/04/25 17:07:05 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,17 +93,17 @@ char		*console(void) {
 	t_stack	*st = initStack();
 
 	while (1) {
-		printf("?: ");
+		printf("%d ?: ", i);
 		read = getline(&buff, &len, stdin);
-		buff[read - 1] = '\0';
+		buff[--read] = '\0';
 		if (strcmp(buff, UNDO) == 0) {
 			i = pop(st);
+			// if (i < 0) i = 0;
 			memset(msg + i, 0, MSG_SIZE - i);
 		} else if (strcmp(buff, SEND) == 0) {
 			destroyStack(&st);
-			free(buff);
 			break ;
-		} else {
+		} else if (i + read < MSG_SIZE) {
 			push(st, i);
 			if (i > 0) {
 				strcat(msg, " ");
@@ -112,8 +112,8 @@ char		*console(void) {
 			strcat(msg, buff);
 			i += strlen(buff);
 		}
-		free(buff); buff = NULL;
 		printf("%s\n\n", msg);
 	}
+	free(buff); buff = NULL;
 	return (msg);
 }
