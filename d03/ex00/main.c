@@ -18,8 +18,8 @@ int main(void)
         /*-------------------
         launch your test here
         --------------------*/
-	// info = getInfo(root);
-	// printTreeInfo(info);
+	info = getInfo(root);
+	printTreeInfo(info);
 
 	return (0);
 }
@@ -34,7 +34,7 @@ void	printTreeInfo(struct s_info info)
 	printf("\n== INFO ==\nelement: %d\n\
 min: %d\n\
 max: %d\n\
-depth: %d\n\
+height: %d\n\
 this tree is BST? %s\n\
 this tree is Balanced? %s\n", info.elements, info.min, info.max, info.height, (info.isBST) ? "yes" : "no",
 	(info.isBalanced) ? "yes" : "no");

@@ -37,4 +37,7 @@ void    printTreeInfo(struct s_info info); //print the info from a binary tree
   &  your own other stuff
   --------------------------------*/
 
+typedef struct s_node		t_node;
+typedef struct s_info		t_info;
+
 #endif
