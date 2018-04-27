@@ -26,5 +26,6 @@ void printPlayers(struct s_player **players);
   &  your own other function
   --------------------------------*/
 
+typedef struct s_player   t_player;
 
 #endif
