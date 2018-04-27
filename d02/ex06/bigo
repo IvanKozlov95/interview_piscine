@@ -1,0 +1,7 @@
+Search:
+O(logn) - in time.
+O(1) - in space.
+
+O(n + m) - in time.
+O(n + m) - in space.
+Where n - elements in the array, m - numbers base.
