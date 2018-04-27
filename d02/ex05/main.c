@@ -25,7 +25,7 @@ int main(void)
 	--------------------*/
 
 	printArray(rocks, n);
-	// printf("Value %d at index %d\n", value, searchShifted(rocks, n, value));
+	printf("Value %d at index %d\n", value, searchShifted(rocks, n, value));
 }
 
 
@@ -56,9 +56,9 @@ int *createRandomArray(int n) {
 }
 
 void printArray(int *arr, int n) {
-	printf("Rocks : ");
+	printf("Rocks :\n");
 	for (int i = 0; i < n; i++) {
-		printf("%d ", arr[i]);
+		printf("%d: %d\n", i, arr[i]);
 	}
-	printf("\n");
+	// printf("\n");
 }
