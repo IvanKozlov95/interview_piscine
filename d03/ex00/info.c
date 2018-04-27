@@ -6,7 +6,7 @@
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/27 13:49:06 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/04/27 15:05:54 by ikozlov          ###   ########.fr       */
+/*   Updated: 2018/04/27 15:53:35 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,11 @@ int			getHeight(t_node *root) {
 	return (fmax(getHeight(root->left), getHeight(root->right)) + 1);
 }
 
+int			getDepth(t_node *root) {
+	if (!root) return (0);
+	return (fmax(getDepth(root->left), getDepth(root->right)) + 1);
+}
+
 void		setMinMaxCount(t_node *root, t_info *info) {
 	if (!root)
 		return ;
@@ -33,7 +38,7 @@ void		setMinMaxCount(t_node *root, t_info *info) {
 
 int			checkIfBalanced(t_node *root) {
 	if (!root) return (1);
-	if (abs(getHeight(root->left) - getHeight(root->right)) <= 1 &&
+	if (abs(getDepth(root->left) - getDepth(root->right)) <= 1 &&
 		checkIfBalanced(root->left) && checkIfBalanced(root->right))
 			return (1);
 	return (0);
