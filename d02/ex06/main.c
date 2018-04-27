@@ -23,10 +23,11 @@ int main(int ac, char **av)
 	launch your test here
 	--------------------*/
 
-	// sortCriminals(criminals);
-	// info = getInfo(av[1]);
-	// potentialCriminals = findPotentialCriminals(criminals, info);
-	// printCriminals(potentialCriminals);
+	sortCriminals(criminals);
+	info = getInfo(av[1]);
+	potentialCriminals = findPotentialCriminals(criminals, info);
+	// printf("%p\n", potentialCriminals);
+	printCriminals(potentialCriminals);
 
 	return (0);
 }
@@ -66,6 +67,7 @@ struct s_criminal **getCriminals(char *filename) {
 }
 
 void printCriminals(struct s_criminal **criminals) {
+	if (!criminals) return ;
 	for (int i = 0; criminals[i]; i++) {
 		printf("%d %s\n", criminals[i]->description, criminals[i]->name);
 	}

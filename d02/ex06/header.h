@@ -37,5 +37,7 @@ struct s_info *getInfo(char *description);
   &  your own other function
   --------------------------------*/
 
+typedef struct s_info				t_info;
+typedef struct s_criminal		t_criminal;
 
 #endif
