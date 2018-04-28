@@ -6,6 +6,14 @@
 
 #include "header.h"
 
+void	test(t_node *root, char *n1, char *n2) {
+	t_node *node;
+
+	printf("In test\n");
+	node = findParent(root, n1, n2);
+	printf("Common parent for %s and %s - |%s|\n", n1, n2, node ? node->name : "Not found");
+}
+
 int main(void)
 {
 	struct s_node *root;
@@ -14,18 +22,16 @@ int main(void)
 	root = getTreeOfLife();
 	node = NULL;
 
-       	/*-------------------
-        launch your test here
-        --------------------*/
+	/*-------------------
+	launch your test here
+	--------------------*/
 
-	// node = findParent(root, "Dinosauria", "Homo sapiens");
-	// if (node)
-	// 	printf("%s\n", node->name);
+	// test(root, "Dinosauria", "Homo sapiens");
+	// test(root, "Lynx", "Marsupialia"); // returns the "Mammalia" node 
+	test(root, "Dinosauria", "I do not exist !"); // returns NULL
 
 	return (0);
 }
-
-
 
 // Function used for the test
 // Don't go further :)
