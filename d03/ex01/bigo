@@ -1,0 +1,3 @@
+O(n) in time.
+O(1) in space.
+Where n - number elements in array.
