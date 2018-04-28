@@ -26,6 +26,6 @@ struct s_node *getTreeOfLife(void);
   &  your own other function
   --------------------------------*/
 
+typedef struct s_node		t_node;
 
 #endif
-  
