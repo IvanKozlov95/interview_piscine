@@ -6,7 +6,7 @@
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/27 16:16:38 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/04/27 22:26:00 by ikozlov          ###   ########.fr       */
+/*   Updated: 2018/04/27 22:28:24 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -125,7 +125,6 @@ t_node		*findParent(struct s_node *root, char *firstSpecies, char *secondSpecies
 
 	findPath(root, q1, firstSpecies);
 	findPath(root, q2, secondSpecies);
-	printf("Here %d %d \n", isEmpty(q1), isEmpty(q2));
 	while (!isEmpty(q1) && !isEmpty(q2)) {
 		if (peek(q1) != peek(q2)) break ;
 		res = dequeue(q1);
