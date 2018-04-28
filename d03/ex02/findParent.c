@@ -6,7 +6,7 @@
 /*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/27 16:16:38 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/04/27 22:28:24 by ikozlov          ###   ########.fr       */
+/*   Updated: 2018/04/27 22:34:08 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,7 +94,7 @@ int				isEmpty(struct s_queue *queue) {
 }
 
 /*
-**	BFS
+**	DFS
 */
 
 int				findPath(t_node *root, t_queue *q, char *name) {
@@ -130,5 +130,7 @@ t_node		*findParent(struct s_node *root, char *firstSpecies, char *secondSpecies
 		res = dequeue(q1);
 		dequeue(q2);
 	}
+	queueDestroy(q1);
+	queueDestroy(q2);
 	return (res);
 }
