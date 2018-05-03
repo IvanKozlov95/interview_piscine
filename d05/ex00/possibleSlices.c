@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   possibleSlices.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ivankozlov <ivankozlov@student.42.fr>      +#+  +:+       +#+        */
+/*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/02 13:15:31 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/05/02 13:46:54 by ivankozlov       ###   ########.fr       */
+/*   Updated: 2018/05/02 21:13:32 by ikozlov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,6 @@ void	printRec(t_array *a, int n) {
 }
 
 void	printPossibleSlices(int pizzaSize) {
-	t_array		*a = calloc(1, sizeof(t_array));
+	t_array		*a = arrayInit();
 	printRec(a, pizzaSize);
 }
