@@ -36,5 +36,6 @@ int dictSearch(struct s_dict *dict, char *key);
   &  your own other function
   --------------------------------*/
 
+typedef struct s_dict   t_dict;
 
 #endif
