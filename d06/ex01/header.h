@@ -23,5 +23,6 @@ struct s_hotspot **readHotspots(char *filename);
   &  your own other function
   --------------------------------*/
 
+typedef struct s_hotspot  t_hotspot;
 
 #endif
