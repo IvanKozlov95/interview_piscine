@@ -1,0 +1,2 @@
+O(n!) - in worst case, in time, find element and check every other element and find combinations.
+O(n) - in space.
