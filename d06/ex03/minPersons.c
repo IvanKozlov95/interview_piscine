@@ -6,11 +6,11 @@
 /*   By: ivankozlov <ivankozlov@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/03 03:17:09 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/05/03 20:46:14 by ivankozlov       ###   ########.fr       */
+/*   Updated: 2018/05/03 20:49:59 by ivankozlov       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "header.h"
+#include <math.h>
 
 int	 minPersons(int elements, int minPercentage) {
 	int count = 2;
