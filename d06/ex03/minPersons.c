@@ -3,23 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   minPersons.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ikozlov <ikozlov@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ivankozlov <ivankozlov@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/03 03:17:09 by ikozlov           #+#    #+#             */
-/*   Updated: 2018/05/03 03:49:06 by ikozlov          ###   ########.fr       */
+/*   Updated: 2018/05/03 20:46:14 by ivankozlov       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <math.h>
+#include "header.h"
 
-int		minPersons(int elements, int minPercentage) {
-	return (ceil(
-			sqrt(
-				2 * elements *
-				log(
-					1 / (1 - (double)minPercentage / 100)
-				)
-			)
-		) + 1
-	);
+int	 minPersons(int elements, int minPercentage) {
+	int count = 2;
+	double percent = 0.0;
+
+	while (percent * 100 < minPercentage) {
+		percent = 1.0 - (double)(pow((double)(elements - 1) / elements,
+			(count * (count - 1)) / 2));
+		count++;
+	}
+	return (count - 1);
 }
