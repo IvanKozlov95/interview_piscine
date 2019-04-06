@@ -45,5 +45,7 @@ struct s_max *maxSlidingWindow(int *arr, int n, int k);
   &  your own other function
   --------------------------------*/
 
+int   isEmpty(struct s_deque *deque);
+void  printDequeue(struct s_deque *q, int *arr);
 
 #endif
